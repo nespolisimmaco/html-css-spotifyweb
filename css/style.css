@@ -95,13 +95,25 @@ a {
 /* Header with "Upgrade" button */
 .header {
     height: 80px;
-    width: 100%;
-    background-color: rgba(28, 28, 28, 0.6);
+    background-color: rgba(28, 28, 28, 0.8);
     position: fixed;
     top: 0;
-    width: 100%;
+    right: 0;
+    width: calc(100% - var(--nav-width));
+    text-align: right;
+    line-height: 80px;
+    padding-right: 1.5rem;
     /* debug */
     border: 1px solid lightgreen;
+}
+
+.upgrade-button {
+    display: inline;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 35px;
+    font-size: .8rem;
+    font-weight: 600;
 }
 
 /* Categories */
