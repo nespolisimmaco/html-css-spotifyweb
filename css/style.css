@@ -16,14 +16,32 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* ********** GENERAL ********** */
 body {
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .flex {
     display: flex;
     flex-wrap: wrap;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Wrapper */
@@ -48,26 +66,81 @@ body {
     width: var(--nav-width);
     height: 100%;
     background-color: black;
+    /* debug */
+    border: 1px solid lightcoral;
+}
+
+.logo img {
+    transform: scale(0.6);
 }
 
 /* ---------- Interface ---------- */
 .interface {
     width: calc(100% - var(--nav-width));
     height: 100%;
-    /* debug */
-    background-color: cadetblue;
+    overflow-y: auto;
+    padding-top: 80px;
+    background-color: var(--interface-color);
 }
 
+/* Container */
+.container {
+    padding: 0 1rem;
+}
+
+/* Header with "Upgrade" button */
 .header {
     height: 80px;
     width: 100%;
-    background-color: rgba(28, 28, 28, 0.8);
+    background-color: rgba(28, 28, 28, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* debug */
+    border: 1px solid lightgreen;
+}
+
+/* Categories */
+.categories {
+    /* debug */
+    min-height: 40px;
+    background-color: aquamarine;
+}
+
+.categories li {
+    /* debug */
+    min-height: 40px;
+    background-color: red;
+    border: 1px dashed black;
+    min-width: 100px;
+}
+
+.categories li:not(:last-child) {
+    margin-right: 1rem;
+}
+
+/* Recently played section */
+.recently-played .row {
+    gap: 10px;
+    /* debug */
+    background-color: cadetblue;
+    border: 2px dashed white;
+}
+
+.recently-played .col {
+    width: calc(100% / 6 - (50px / 6));
+    height: calc((100vw - 200px) / 6);
+    text-align: center;
+    /* debug */
+    border: 2px solid lightseagreen;
+    background-color: fuchsia;
 }
 
 /* ********** PLAYER ********** */
 .player {
     height: var(--player-height);
     width: 100%;
+    background-color: var(--player-color);
     /* debug */
-    background-color: salmon;
+    border: 1px solid lightskyblue;
 }
