@@ -3,6 +3,10 @@
     --header-height: ;
     --nav-width: 250px;
     --player-height: 100px;
+    /* Colors */
+    --header-color: #080b12;
+    --interface-color: #141922;
+    --player-color: #282828;
 }
 
 /* ********** RESET ********** */
@@ -52,6 +56,12 @@ body {
     height: 100%;
     /* debug */
     background-color: cadetblue;
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: rgba(28, 28, 28, 0.8);
 }
 
 /* ********** PLAYER ********** */
