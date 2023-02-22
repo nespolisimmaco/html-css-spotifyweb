@@ -83,6 +83,10 @@ a {
     background-color: var(--interface-color);
 }
 
+.interface .row {
+    margin: 1.5rem 0;
+}
+
 /* Container */
 .container {
     padding: 0 1rem;
@@ -102,6 +106,7 @@ a {
 
 /* Categories */
 .categories {
+    margin-bottom: 2rem;
     /* debug */
     min-height: 40px;
     background-color: aquamarine;
@@ -120,15 +125,53 @@ a {
 }
 
 /* Recently played section */
+.recently-played {
+    margin-bottom: 2rem;
+}
+
 .recently-played .row {
-    gap: 10px;
+    gap: 20px;
     /* debug */
     background-color: cadetblue;
     border: 2px dashed white;
 }
 
 .recently-played .col {
-    width: calc(100% / 6 - (50px / 6));
+    width: calc(100% / 6 - (100px / 6));
+    height: calc((100vw - 200px) / 6);
+    text-align: center;
+    /* debug */
+    border: 2px solid lightseagreen;
+    background-color: fuchsia;
+}
+
+/* Created for section */
+.created-for .row {
+    gap: 20px;
+    /* debug */
+    background-color: cadetblue;
+    border: 2px dashed white;
+}
+
+.created-for .col {
+    width: calc(100% / 6 - (100px / 6));
+    height: calc((100vw - 200px) / 6);
+    text-align: center;
+    /* debug */
+    border: 2px solid lightseagreen;
+    background-color: fuchsia;
+}
+
+/* Most popular section */
+.most-popular .row {
+    gap: 20px;
+    /* debug */
+    background-color: cadetblue;
+    border: 2px dashed white;
+}
+
+.most-popular .col {
+    width: calc(100% / 6 - (100px / 6));
     height: calc((100vw - 200px) / 6);
     text-align: center;
     /* debug */
