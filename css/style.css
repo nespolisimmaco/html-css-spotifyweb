@@ -1,0 +1,63 @@
+/* ***** VARIABLES ***** */
+:root {
+    --header-height: ;
+    --nav-width: 250px;
+    --player-height: 100px;
+}
+
+/* ********** RESET ********** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ********** GENERAL ********** */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Wrapper */
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    /* debug */
+    background-color: lightgreen;
+}
+
+/* ********** MAIN ***********/
+/* ---------- Main Content ---------- */
+.content {
+    width: 100%;
+    height: calc(100% - var(--player-height));
+    /* debug */
+    background-color: rebeccapurple;
+}
+
+/* ---------- Sidebar with my playlists ---------- */
+.nav-bar {
+    width: var(--nav-width);
+    height: 100%;
+    background-color: black;
+}
+
+/* ---------- Interface ---------- */
+.interface {
+    width: calc(100% - var(--nav-width));
+    height: 100%;
+    /* debug */
+    background-color: cadetblue;
+}
+
+/* ********** PLAYER ********** */
+.player {
+    height: var(--player-height);
+    width: 100%;
+    /* debug */
+    background-color: salmon;
+}
