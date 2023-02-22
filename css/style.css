@@ -74,6 +74,11 @@ a {
     transform: scale(0.6);
 }
 
+.nav-browse li {
+    /* debug */
+    border: 1px dashed greenyellow;
+}
+
 /* ---------- Interface ---------- */
 .interface {
     width: calc(100% - var(--nav-width));
@@ -196,6 +201,19 @@ a {
     height: var(--player-height);
     width: 100%;
     background-color: var(--player-color);
+    justify-content: space-between;
+}
+
+.playing-song, .volume {
+    width: 15%;
+    height: var(--player-height);
     /* debug */
-    border: 1px solid lightskyblue;
+    background-color: chocolate;
+}
+
+.music-controls {
+    height: var(--player-height);
+    flex-grow: 1;
+    /* debug */
+    background-color: brown;
 }
