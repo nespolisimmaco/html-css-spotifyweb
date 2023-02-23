@@ -258,21 +258,30 @@ hr {
 /* Categories */
 .categories {
     margin-bottom: 2rem;
-    /* debug */
-    min-height: 40px;
-    background-color: aquamarine;
+}
+
+.categories ul {
+    gap: 1.5rem;
 }
 
 .categories li {
-    /* debug */
-    min-height: 40px;
-    background-color: red;
-    border: 1px dashed black;
-    min-width: 100px;
+    color: grey;
+    font-weight: 700;
+    padding: 5px;
+    text-align: center;
 }
 
-.categories li:not(:last-child) {
-    margin-right: 1rem;
+#category-active {
+    position: relative;
+}
+
+#border-active {
+    border: 1px solid greenyellow;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 30%;
+    transform: translate(-50%, -50%);
 }
 
 /* Recently played section */
