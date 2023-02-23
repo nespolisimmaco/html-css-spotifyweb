@@ -377,13 +377,14 @@ hr {
     cursor: pointer;
 }
 
+/* Playing song */
 .playing-song {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
 
-.playing-song, .volume {
+.playing-song, .volume-control {
     width: 200px;
     height: var(--player-height);
 }
@@ -415,9 +416,33 @@ hr {
     color: grey;
 }
 
+/* Music controls */
 .music-controls {
     height: var(--player-height);
     flex-grow: 1;
     /* debug */
     background-color: brown;
+}
+
+/* Volume */
+.volume-control {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.volume-control i {
+    color: white;
+}
+
+.volume-level {
+    width: 100px;
+    background-color: grey;
+    border-radius: 2px;
+}
+
+.volume {
+    border: 2px solid lightgrey;
+    width: 30%;
+    border-radius: 2px;
 }
