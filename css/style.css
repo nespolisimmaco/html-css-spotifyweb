@@ -58,8 +58,6 @@ a {
 .content {
     width: 100%;
     height: calc(100% - var(--player-height));
-    /* debug */
-    background-color: rebeccapurple;
 }
 
 /* ---------- Sidebar with my playlists ---------- */
@@ -199,7 +197,7 @@ hr {
 /* Header with "Upgrade" button */
 .header {
     height: 80px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     right: 0;
@@ -207,8 +205,6 @@ hr {
     text-align: right;
     line-height: 80px;
     padding-right: 1.5rem;
-    /* debug */
-    border: 1px solid lightgreen;
 }
 
 .upgrade-button {
@@ -270,9 +266,9 @@ hr {
 
 .created-for .col {
     width: calc(100% / 6 - (100px / 6));
-    height: calc((100vw - 200px) / 6);
     text-align: center;
     /* debug */
+    min-height: 200px;
     border: 2px solid lightseagreen;
     background-color: fuchsia;
 }
@@ -287,11 +283,20 @@ hr {
 
 .most-popular .col {
     width: calc(100% / 6 - (100px / 6));
-    height: calc((100vw - 200px) / 6);
     text-align: center;
     /* debug */
+    min-height: 200px;
     border: 2px solid lightseagreen;
     background-color: fuchsia;
+}
+
+/* * Medium layout (1100px) * */
+@media screen and (max-width: 1100px) {
+    .recently-played .col,
+    .created-for .col,
+    .most-popular .col {
+        width: calc(100% / 4 - (60px / 4));
+    }
 }
 
 /* ********** PLAYER ********** */
