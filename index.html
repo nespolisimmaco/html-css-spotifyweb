@@ -129,7 +129,7 @@
 
                     <!-- Recently played section -->
                     <section class="recently-played">
-                        <h2>Recently played</h2>
+                        <a href="#"> <h2>Recently played</h2> </a>
                         <!-- Row -->
                         <div class="row flex">
                             <!-- Column -->
@@ -142,9 +142,9 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>Heavy Metal</h3>
+                                        <a href="#"> <h3>Heavy Metal</h3> </a>
                                         <div class="subtitle">
-                                            Subtitle
+                                            <a href="#">Subtitle</a>
                                         </div>
                                     </div>
                                 </div>
@@ -159,9 +159,9 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                                        <a href="#"> <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3> </a>
                                         <div class="subtitle">
-                                            Kyle Dixon & Michael Stein
+                                            <a href="#"> Kyle Dixon & Michael Stein </a>
                                         </div>
                                     </div>
                                 </div>
@@ -176,9 +176,9 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>A quiet place</h3>
+                                        <a href="#"> <h3>A quiet place</h3> </a>
                                         <div class="subtitle">
-                                            Subtitle
+                                            <a href="#"> Subtitle </a>
                                         </div>
                                     </div>
                                 </div>
@@ -193,9 +193,9 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>Split</h3>
+                                        <a href="#"> <h3>Split</h3> </a>
                                         <div class="subtitle">
-                                            Subtitle
+                                            <a href="#"> Subtitle </a>
                                         </div>
                                     </div>
                                 </div>
@@ -210,9 +210,9 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>A cure for wellnes</h3>
+                                        <a href="#"> <h3>A cure for wellnes</h3> </a>
                                         <div class="subtitle">
-                                            Subtitle
+                                            <a href="#"> Subtitle </a>
                                         </div>
                                     </div>
                                 </div>
@@ -227,9 +227,9 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>Sinister</h3>
+                                        <a href="#"> <h3>Sinister</h3> </a>
                                         <div class="subtitle">
-                                            Subtitle
+                                            <a href="#"> Subtitle </a>
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@
 
                     <!-- Created for section -->
                     <section class="created-for">
-                        <h2>Creato per Simmaco Nespoli</h2>
+                        <a href="#"> <h2>Creato per Simmaco Nespoli</h2> </a>
                         <div></div>
                         <!-- Row -->
                         <div class="row flex">
@@ -255,7 +255,7 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>Release Radar</h3>
+                                        <a href="#"> <h3>Release Radar</h3> </a>
                                     </div>
                                 </div>
                             </div>
@@ -269,7 +269,7 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>Daily Mix 1</h3>
+                                        <a href="#"> <h3>Daily Mix 1</h3> </a>
                                     </div>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@
 
                     <!-- Most popular section -->
                     <section class="most-popular">
-                        <h2>Artisti più popolari</h2>
+                        <a href="#"> <h2>Artisti più popolari</h2> </a>
                         <div></div>
                         <!-- Row -->
                         <div class="row flex">
@@ -294,7 +294,7 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>Lana del Rey</h3>
+                                        <a href="#"> <h3>Lana del Rey</h3> </a>
                                     </div>
                                 </div>
                             </div>
@@ -308,7 +308,7 @@
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
-                                        <h3>Ludovico Einaudi</h3>
+                                        <a href="#"> <h3>Ludovico Einaudi</h3> </a>
                                     </div>
                                 </div>
                             </div>
@@ -334,18 +334,58 @@
                     <a href="#" class="title-playing-song">Sinister</a>
                     <a href="#" class="subtitle">Brano Nome</a>
                 </div>
-                <button> <i class="fa-regular fa-heart"></i> </button>
-                <button> <i class="fa-regular fa-folder"></i> </button>
+                <ul class="flex">
+                    <li>
+                        <button> <i class="fa-regular fa-heart"></i> </button>
+                    </li>
+                    <li>
+                        <button> <i class="fa-regular fa-folder"></i> </button>
+                    </li>
+                </ul>
             </div>
             <!-- Controls -->
-            <div class="music-controls">
-
+            <div class="music-controls flex">
+                <div class="song-controls">
+                    <ul class="flex">
+                        <li>
+                            <button> <i class="fa-solid fa-shuffle fa-2x"></i> </button>
+                        </li>
+                        <li>
+                            <button> <i class="fa-solid fa-backward-step fa-2x"></i> </button>
+                        </li>
+                        <li>
+                            <button> <i class="fa-solid fa-circle-play fa-3x"></i> </button>
+                        </li>
+                        <li>
+                            <button> <i class="fa-solid fa-forward-step fa-2x"></i> </button>
+                        </li>
+                        <li>
+                            <button> <i class="fa-solid fa-repeat fa-2x"></i> </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="song-time flex">
+                    <span> <strong>0:25</strong> </span>
+                    <div class="time">
+                        <div class="current-time"></div>
+                    </div>
+                    <span> <strong>4:35</strong> </span>
+                </div>
             </div>
             <!-- Volume -->
             <div class="volume-control flex">
-                <button> <i class="fa-solid fa-list"></i> </button>
-                <button> <i class="fa-solid fa-display"></i> </button>
-                <button> <i class="fa-solid fa-volume-high"></i> </button>
+                <ul class="flex">
+                    <li>
+                        <button> <i class="fa-solid fa-list"></i> </button>
+                    </li>
+                    <li>
+                        <button> <i class="fa-solid fa-display"></i> </button>
+                    </li>
+                    <li>
+                        <button> <i class="fa-solid fa-volume-high"></i> </button>
+                    </li>
+                </ul>
+                
                 <div class="volume-level">
                     <div class="volume"></div>
                 </div>

@@ -369,6 +369,7 @@ hr {
     width: 100%;
     background-color: var(--player-color);
     justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .player button {
@@ -377,7 +378,7 @@ hr {
     cursor: pointer;
 }
 
-/* Playing song */
+/* -- Playing song -- */
 .playing-song {
     justify-content: space-between;
     align-items: center;
@@ -416,15 +417,58 @@ hr {
     color: grey;
 }
 
-/* Music controls */
+.playing-song li:not(:last-child) {
+    margin-right: 12px;
+}
+
+/* -- Music controls -- */
 .music-controls {
     height: var(--player-height);
     flex-grow: 1;
-    /* debug */
-    background-color: brown;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Volume */
+/* Song controls */
+.song-controls ul {
+    align-items: center;
+}
+
+.song-controls li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.song-controls i {
+    color: white;
+}
+
+/* Song time */
+.song-time {
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.song-time span {
+    font-size: .7rem;
+}
+
+.time {
+    background-color: grey;
+    width: 50%;
+    border-radius: 2px;
+    margin: 0 1rem;
+}
+
+.current-time {
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    width: 25%;
+}
+
+/* -- Volume -- */
 .volume-control {
     justify-content: space-between;
     align-items: center;
@@ -433,6 +477,10 @@ hr {
 
 .volume-control i {
     color: white;
+}
+
+.volume-control li:not(:last-child) {
+    margin-right: 12px;
 }
 
 .volume-level {
@@ -445,4 +493,15 @@ hr {
     border: 2px solid lightgrey;
     width: 30%;
     border-radius: 2px;
+}
+
+/* * Player layout under 700px * */
+@media screen and (max-width: 700px) {
+    .song-controls i {
+        font-size: 1.5rem;
+    }
+
+    .song-controls li:not(:last-child) {
+        margin-right: 1rem;
+    }
 }
