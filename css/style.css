@@ -1,8 +1,9 @@
 /* ***** VARIABLES ***** */
 :root {
     --header-height: ;
-    --nav-width: 250px;
+    --nav-width: 200px;
     --player-height: 100px;
+    --nav-padding: 1rem;
     /* Colors */
     --header-color: #080b12;
     --interface-color: #141922;
@@ -66,17 +67,115 @@ a {
     width: var(--nav-width);
     height: 100%;
     background-color: black;
-    /* debug */
-    border: 1px solid lightcoral;
+    padding-top: var(--nav-padding);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Spotify logo */
 .logo img {
-    transform: scale(0.6);
+    width: 60%;
+    padding-left: var(--nav-padding);
 }
 
-.nav-browse li {
-    /* debug */
-    border: 1px dashed greenyellow;
+.nav-browse li, .playlist li {
+    margin: 1rem 0;
+    color: grey;
+    font-size: .8rem;
+    font-weight: 600;
+    padding-left: var(--nav-padding);
+}
+
+/* Active */
+.nav-browse li:first-child {
+    color: white;
+    border-left: 3px solid greenyellow;
+}
+
+.nav-browse img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+/* Playlist */
+.playlist {
+    flex-grow: 1;
+}
+
+.playlist h4 {
+    padding: 1rem;
+}
+
+.playlist li:first-child {
+    margin-top: 0;
+}
+
+/* User and Download app */
+.user {
+    width: 200px;
+    padding: 0 var(--nav-padding);
+}
+
+.download-app {
+    color: grey;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.download-app img {
+    width: 20px;
+    vertical-align: middle;
+    filter: invert(56%) sepia(10%) saturate(0%) hue-rotate(305deg) brightness(88%) contrast(99%);
+}
+
+.download-app span {
+    vertical-align: middle;
+}
+
+hr {
+    border-color: grey;
+}
+
+.user-name {
+    margin: 10px 0 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.user-logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background-color: grey;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.user-logo img {
+    width: 18px;
+}
+
+.user-name span {
+    vertical-align: middle;
+}
+/* Create playlist */
+.create-playlist {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: darkgrey;
+    text-align: center;
+    line-height: 40px;
+    margin-right: .5rem;
+}
+
+.create-playlist i {
+    color: black;
+    vertical-align: middle;
 }
 
 /* ---------- Interface ---------- */
@@ -92,7 +191,7 @@ a {
     margin: 1.5rem 0;
 }
 
-/* Container */
+/* Container of interface */
 .container {
     padding: 0 1rem;
 }
@@ -100,7 +199,7 @@ a {
 /* Header with "Upgrade" button */
 .header {
     height: 80px;
-    background-color: rgba(28, 28, 28, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
     right: 0;
@@ -155,7 +254,6 @@ a {
 
 .recently-played .col {
     width: calc(100% / 6 - (100px / 6));
-    height: calc((100vw - 200px) / 6);
     text-align: center;
     /* debug */
     border: 2px solid lightseagreen;
@@ -205,7 +303,7 @@ a {
 }
 
 .playing-song, .volume {
-    width: 15%;
+    width: var(--nav-width);
     height: var(--player-height);
     /* debug */
     background-color: chocolate;
