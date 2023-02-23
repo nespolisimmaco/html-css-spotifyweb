@@ -4,6 +4,7 @@
     --nav-width: 200px;
     --player-height: 100px;
     --nav-padding: 1rem;
+    --nav-padding-small: 10px;
     /* Colors */
     --header-color: #080b12;
     --interface-color: #141922;
@@ -67,15 +68,22 @@ a {
     background-color: black;
     padding-top: var(--nav-padding);
     overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 /* Spotify logo */
-.logo img {
+.big-logo {
     width: 60%;
     padding-left: var(--nav-padding);
+}
+
+.small-logo {
+    display: none;
+    padding-left: var(--nav-padding-small);
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(106%) contrast(101%);
 }
 
 .nav-browse li, .playlist li {
@@ -87,7 +95,7 @@ a {
 }
 
 /* Active */
-.nav-browse li:first-child {
+.active {
     color: white;
     border-left: 3px solid greenyellow;
 }
@@ -160,6 +168,39 @@ hr {
 .user-name span {
     vertical-align: middle;
 }
+
+/* * Extra-small layout (600px) * */
+@media screen and (max-width: 600px) {
+    :root {
+        --nav-width: 50px;
+    }
+
+    .playlist, 
+    .nav-browse span,
+    .big-logo,
+    .download-app span,
+    .user-name span,
+    hr {
+        display: none;
+    }
+
+    .small-logo {
+        display: inline-block;
+    }
+
+    .nav-browse li {
+        padding-left: var(--nav-padding-small);
+    }
+
+    .active {
+        border-left: none;
+    }
+
+    .nav-browse {
+        flex-grow: 1;
+    }
+}
+
 /* Create playlist */
 .create-playlist {
     display: inline-block;
@@ -317,7 +358,7 @@ hr {
 }
 
 .playing-song, .volume {
-    width: var(--nav-width);
+    width: 200px;
     height: var(--player-height);
     /* debug */
     background-color: chocolate;

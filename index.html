@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify - Web Player</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,27 +26,28 @@
             <div class="nav-bar">
                 <!-- Spotify logo -->
                 <div class="logo">
-                    <img src="img/logo.svg" alt="Spotify logo">
+                    <img class="big-logo" src="img/logo.svg" alt="Spotify logo big">
+                    <img class="small-logo" src="img/favicon.ico" alt="Spotify logo small">
                 </div>
                 <!-- Home, Search and Your Library -->
                 <div class="nav-browse">
                     <ul>
-                        <li>
+                        <li class="active">
                             <a href="#">
                                 <img src="img/home.svg" alt="Home">
-                                Home
+                                <span>Home</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/search.svg" alt="Search">
-                                Cerca
+                                <span>Cerca</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/libreria.svg" alt="Library">
-                                La tua libreria
+                                <span>La tua libreria</span>
                             </a>
                         </li>
                     </ul>
