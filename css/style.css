@@ -50,8 +50,6 @@ a {
 .wrapper {
     height: 100vh;
     width: 100%;
-    /* debug */
-    background-color: lightgreen;
 }
 
 /* ********** MAIN ***********/
@@ -284,51 +282,46 @@ hr {
 
 .recently-played .row {
     gap: 20px;
-    /* debug */
-    background-color: cadetblue;
-    border: 2px dashed white;
 }
 
 .recently-played .col {
     width: calc(100% / 6 - (100px / 6));
     text-align: center;
-    /* debug */
-    border: 2px solid lightseagreen;
-    background-color: fuchsia;
+}
+
+.title {
+    margin-top: 1rem;
+}
+
+.subtitle {
+    color: grey;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-top: 10px;
 }
 
 /* Created for section */
 .created-for .row {
     gap: 20px;
-    /* debug */
-    background-color: cadetblue;
-    border: 2px dashed white;
 }
 
 .created-for .col {
     width: calc(100% / 6 - (100px / 6));
     text-align: center;
-    /* debug */
-    min-height: 200px;
-    border: 2px solid lightseagreen;
-    background-color: fuchsia;
 }
 
 /* Most popular section */
 .most-popular .row {
     gap: 20px;
-    /* debug */
-    background-color: cadetblue;
-    border: 2px dashed white;
 }
 
 .most-popular .col {
     width: calc(100% / 6 - (100px / 6));
     text-align: center;
-    /* debug */
-    min-height: 200px;
-    border: 2px solid lightseagreen;
-    background-color: fuchsia;
+}
+
+.rounded {
+    border-radius: 50%;
 }
 
 /* * Medium layout (1100px) * */
