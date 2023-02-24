@@ -46,6 +46,40 @@ a {
     color: inherit;
 }
 
+h2:hover,
+h3:hover,
+.subtitle:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.cover {
+    position: relative;
+}
+
+.cover:hover img {
+    filter: opacity(0.5);
+}
+
+.cover:hover .play {
+    display: block;
+}
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.play button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
 /* Wrapper */
 .wrapper {
     height: 100vh;
@@ -72,12 +106,17 @@ a {
     justify-content: space-between;
 }
 
-/* Spotify logo */
+.nav-bar a:hover {
+    filter: brightness(200%);
+}
+
+/* Big Spotify logo */
 .big-logo {
     width: 60%;
     padding-left: var(--nav-padding);
 }
 
+/* Small Spotify logo */
 .small-logo {
     display: none;
     padding-left: var(--nav-padding-small);
@@ -254,17 +293,21 @@ hr {
     right: 0;
     width: calc(100% - var(--nav-width));
     text-align: right;
-    line-height: 80px;
-    padding-right: 1.5rem;
+    padding: 1.5rem;
 }
 
 .upgrade-button {
-    display: inline;
+    display: inline-block;
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px 35px;
     font-size: .8rem;
     font-weight: 600;
+    transition: all 0.5s;
+}
+
+.upgrade-button:hover {
+    transform: scale(1.2);
 }
 
 /* Categories */
@@ -281,6 +324,10 @@ hr {
     font-weight: 700;
     padding: 5px;
     text-align: center;
+}
+
+.categories a:hover {
+    color: white;
 }
 
 #category-active {
@@ -378,6 +425,18 @@ hr {
     cursor: pointer;
 }
 
+/* Circle on volume level */
+.circle {
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+    display: none;
+}
+
 /* -- Playing song -- */
 .playing-song {
     justify-content: space-between;
@@ -392,6 +451,10 @@ hr {
 
 .playing-song img {
     width: 50px;
+}
+
+.playing-song i:hover {
+    filter: brightness(200%);
 }
 
 .title-playing-song {
@@ -443,6 +506,10 @@ hr {
     color: white;
 }
 
+#play-button:hover {
+    transform: scale(1.07);
+}
+
 /* Song time */
 .song-time {
     align-items: center;
@@ -451,13 +518,16 @@ hr {
     justify-content: center;
 }
 
+.song-time button {
+    width: 50%;
+}
+
 .song-time span {
     font-size: .7rem;
 }
 
 .time {
     background-color: grey;
-    width: 50%;
     border-radius: 2px;
     margin: 0 1rem;
 }
@@ -466,6 +536,15 @@ hr {
     border: 2px solid lightgray;
     border-radius: 2px;
     width: 25%;
+    position: relative;
+}
+
+.time:hover .current-time {
+    border-color: greenyellow;
+}
+
+.time:hover .circle {
+    display: block;
 }
 
 /* -- Volume -- */
@@ -493,6 +572,15 @@ hr {
     border: 2px solid lightgrey;
     width: 30%;
     border-radius: 2px;
+    position: relative;
+}
+
+.volume-level:hover .volume {
+    border-color: greenyellow;
+}
+
+.volume-level:hover .circle {
+    display: block;
 }
 
 /* * Player layout under 700px * */

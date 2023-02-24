@@ -139,6 +139,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img src="img/metal_lifting.jpg" alt="Heavy Metal">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -156,6 +160,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img src="img/stranger.jpeg" alt="Stranger Things">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -173,6 +181,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img src="img/aquietplace.jpeg" alt="A quiet place">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -190,6 +202,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img src="img/split.jpeg" alt="Split">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -207,6 +223,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img src="img/cure.jpeg" alt="A cure for wellness">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -224,6 +244,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img src="img/sinister.jpeg" alt="Sinister">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -252,6 +276,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img src="img/radar.jpeg" alt="Your Release Radar">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -266,6 +294,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img src="img/mixdaily.jpeg" alt="Your Daily Mix">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -291,6 +323,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img class="rounded" src="img/youg.jpeg" alt="Lana del Rey - Young And Beautiful">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -305,6 +341,10 @@
                                     <!-- Cover -->
                                     <div class="cover">
                                         <img class="rounded" src="img/einaudi.jpeg" alt="Ludovico Einaudi">
+                                        <!-- Play button -->
+                                        <div class="play">
+                                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
+                                        </div>
                                     </div>
                                     <!-- Title -->
                                     <div class="title">
@@ -318,10 +358,8 @@
                     <!-- End Most popular section -->
                 </div>
                 <!-- End Container -->
-
             </div>
             <!-- End Main Interface -->
-
         </main>
         <!-- End Main Content -->
 
@@ -354,7 +392,7 @@
                             <button> <i class="fa-solid fa-backward-step fa-2x"></i> </button>
                         </li>
                         <li>
-                            <button> <i class="fa-solid fa-circle-play fa-3x"></i> </button>
+                            <button> <i id="play-button" class="fa-solid fa-circle-play fa-3x"></i> </button>
                         </li>
                         <li>
                             <button> <i class="fa-solid fa-forward-step fa-2x"></i> </button>
@@ -364,11 +402,16 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Time of the song -->
                 <div class="song-time flex">
                     <span> <strong>0:25</strong> </span>
-                    <div class="time">
-                        <div class="current-time"></div>
-                    </div>
+                    <button>
+                        <div class="time">
+                            <div class="current-time">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </button>
                     <span> <strong>4:35</strong> </span>
                 </div>
             </div>
@@ -385,10 +428,14 @@
                         <button> <i class="fa-solid fa-volume-high"></i> </button>
                     </li>
                 </ul>
-                
-                <div class="volume-level">
-                    <div class="volume"></div>
-                </div>
+                <!-- Volume level -->
+                <button>
+                    <div class="volume-level">
+                        <div class="volume">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </button>
             </div>
         </div>
         <!-- End Player -->
