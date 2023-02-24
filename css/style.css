@@ -106,7 +106,9 @@ h3:hover,
     justify-content: space-between;
 }
 
-.nav-bar a:hover {
+.playlist a:hover,
+.nav-browse a:hover,
+.download-app a:hover {
     filter: brightness(200%);
 }
 
@@ -213,6 +215,8 @@ hr {
     margin: 10px 0 5px;
     font-weight: 600;
     font-size: 0.9rem;
+    border-radius: 20px;
+    padding: 2px;
 }
 
 .user-logo {
@@ -233,6 +237,10 @@ hr {
     vertical-align: middle;
 }
 
+.user-name:hover {
+    background-color: #1DB954;
+}
+
 /* * Extra-small layout (600px) * */
 @media screen and (max-width: 600px) {
     :root {
@@ -246,6 +254,14 @@ hr {
     .user-name span,
     hr {
         display: none;
+    }
+
+    .user-name:hover {
+        background-color: transparent;
+    }
+
+    .user-name {
+        padding: 0;
     }
 
     .small-logo {
@@ -335,7 +351,7 @@ hr {
     position: relative;
 }
 
-#border-active {
+.border-active {
     border: 1px solid greenyellow;
     position: absolute;
     bottom: 0;
@@ -483,6 +499,12 @@ hr {
 
 .playing-song li:not(:last-child) {
     margin-right: 12px;
+}
+
+@media screen and (max-width: 700px) {
+    .playing-song ul {
+        flex-direction: column;
+    }
 }
 
 /* -- Music controls -- */
